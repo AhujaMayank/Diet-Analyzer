@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_test_coordinate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailTest">
+
+    <fragment
+        android:id="@+id/fragment_detail_test"
+        android:name="com.example.ahuja.dietanalyzer.Adapters_Fragments.DataShowFrag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</android.support.design.widget.CoordinatorLayout>

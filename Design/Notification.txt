@@ -1,0 +1,13 @@
+Intent intent = new Intent(this, AddWeight.class);
+intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        android.support.v4.app.NotificationCompat.Builder cBuilder=new android.support.v4.app.NotificationCompat.Builder(this,CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_menu_camera)
+                .setContentTitle("Log Weight")
+                .setContentText("Seems you have forgotten to log weight")
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+                .setPriority(android.support.v4.app.NotificationCompat.PRIORITY_DEFAULT);
+
+        NotificationManagerCompat notificationManagerCompat=NotificationManagerCompat.from(this);
+        notificationManagerCompat.notify(NOTIF_ID,cBuilder.build());

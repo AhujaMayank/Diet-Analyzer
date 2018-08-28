@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_meal_option_relative_layout"
+    tools:context=".AddMealOption">
+    <LinearLayout
+        android:id="@+id/add_meal_option_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/add_meal_option_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="24sp"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/add_meal_option_type_of_meal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type of Meal :"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+
+        android:layout_below="@id/add_meal_option_ll">
+
+        <fragment
+            android:id="@+id/fragment_data_show_frag_layout"
+            android:name="com.example.ahuja.dietanalyzer.Adapters_Fragments.DataShowFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:onClick="AddWaterOption"
+        android:text="My Food" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+       <Button
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.5"
+           android:text="Search"
+           android:onClick="AddMealOptSearch"/>
+     <Button
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight=".5"
+         android:text="Enter Manually"
+         android:onClick="AddMealOptManual"
+         />
+    </LinearLayout>
+ </RelativeLayout>
